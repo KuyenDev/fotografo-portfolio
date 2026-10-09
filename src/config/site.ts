@@ -13,7 +13,7 @@ export const siteConfig = {
     fullDisclaimer: 'Sitio de demostración creado por KuyénDev. Marca, proyectos, testimonios y datos ficticios con fines ilustrativos.',
     shortDisclaimer: 'Demostración de diseño web premium para el catálogo de KuyénDev.',
     agencyName: 'KuyénDev',
-    agencyUrl: 'https://kuyendev.com',
+    agencyUrl: 'https://kuyendev.cl',
   },
   navigation: [
     { name: 'HOME', path: '/', label: 'Inicio' },
@@ -29,7 +29,7 @@ export const siteConfig = {
     { name: 'LinkedIn', handle: 'noir-frame-demo', url: 'https://linkedin.com' },
   ],
   contactDemo: {
-    email: 'contacto.demo@noirframe.kuyendev.com',
+    email: 'contacto.demo@noirframe.kuyendev.cl',
     phone: '+56 9 0000 0000 (Ficticio)',
     studioAddress: 'Av. El Parque 4120, Distrito Creativo, Santiago (Ejemplo)',
   },
