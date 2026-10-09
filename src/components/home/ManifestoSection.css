@@ -1,0 +1,133 @@
+.manifesto-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: clamp(5rem, 10vw, 10rem) 0;
+}
+
+.manifesto-bg-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.manifesto-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: contrast(1.15) brightness(0.35) grayscale(0.5);
+}
+
+.manifesto-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at center,
+      rgba(11, 11, 11, 0.6) 0%,
+      rgba(11, 11, 11, 0.94) 80%
+    ),
+    linear-gradient(
+      180deg,
+      #0B0B0B 0%,
+      transparent 25%,
+      transparent 75%,
+      #0B0B0B 100%
+    );
+}
+
+.manifesto-container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.manifesto-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.manifesto-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(18, 18, 18, 0.7);
+  border: 1px solid rgba(185, 155, 118, 0.3);
+  font-size: 0.6875rem;
+  letter-spacing: var(--ls-widest);
+  color: var(--color-accent-light);
+  margin-bottom: 2rem;
+  border-radius: 2px;
+}
+
+.manifesto-headline {
+  font-size: var(--fs-display-1);
+  line-height: 0.95;
+  color: var(--color-text-light);
+  letter-spacing: -0.01em;
+  margin-bottom: 2.5rem;
+}
+
+.manifesto-italic {
+  font-style: italic;
+  color: var(--color-accent-light);
+  font-weight: 500;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.9);
+}
+
+.manifesto-sub-block {
+  max-width: 680px;
+}
+
+.manifesto-lead {
+  font-size: var(--fs-body-lg);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+  margin-bottom: 3rem;
+}
+
+.manifesto-stats-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.manifesto-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.m-stat-val {
+  font-family: var(--font-serif);
+  font-size: 1.75rem;
+  color: var(--color-text-light);
+}
+
+.m-stat-lbl {
+  font-size: 0.65rem;
+  letter-spacing: var(--ls-wider);
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-top: 0.2rem;
+}
+
+.manifesto-stat-divider {
+  width: 1px;
+  height: 32px;
+  background: var(--color-border);
+}
+
+@media (max-width: 600px) {
+  .manifesto-stat-divider {
+    display: none;
+  }
+}

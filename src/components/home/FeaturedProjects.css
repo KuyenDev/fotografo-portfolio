@@ -1,0 +1,229 @@
+.featured-section {
+  position: relative;
+  background-color: #0d0d0d;
+}
+
+.featured-header-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 860px) {
+  .featured-header-row {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.featured-projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+}
+
+/* Base Entry */
+.project-entry {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+/* 1. Split Hero (First Project) */
+@media (min-width: 960px) {
+  .project-entry--split-hero {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4.5rem;
+  }
+  .project-entry--split-hero .project-media-wrap {
+    aspect-ratio: 16 / 10;
+  }
+}
+
+/* 2. Portrait Offset (Second Project) */
+@media (min-width: 960px) {
+  .project-entry--portrait-offset {
+    grid-template-columns: 0.9fr 1.2fr;
+    gap: 5rem;
+  }
+  .project-entry--portrait-offset .project-media-wrap {
+    order: 2;
+    aspect-ratio: 4 / 5;
+    max-height: 650px;
+  }
+  .project-entry--portrait-offset .project-info-block {
+    order: 1;
+    padding-left: 2rem;
+  }
+}
+
+/* 3. Wide Editorial (Third Project) */
+@media (min-width: 960px) {
+  .project-entry--wide-editorial {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .project-entry--wide-editorial .project-media-wrap {
+    aspect-ratio: 21 / 9;
+    max-height: 520px;
+  }
+  .project-entry--wide-editorial .project-info-block {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+}
+
+/* 4. Reversed Split (Fourth Project) */
+@media (min-width: 960px) {
+  .project-entry--reversed-split {
+    grid-template-columns: 1fr 1.3fr;
+    gap: 4.5rem;
+  }
+  .project-entry--reversed-split .project-media-wrap {
+    order: 2;
+    aspect-ratio: 16 / 11;
+  }
+  .project-entry--reversed-split .project-info-block {
+    order: 1;
+  }
+}
+
+/* 5. Card Showcase (Fifth Project) */
+@media (min-width: 960px) {
+  .project-entry--card-showcase {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+  }
+  .project-entry--card-showcase .project-media-wrap {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* Media Wrap & Hover Effect */
+.project-media-wrap {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background-color: #141414;
+  border: 1px solid var(--color-border);
+  aspect-ratio: 16 / 10;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-editorial), filter 0.5s ease;
+  filter: contrast(1.05) brightness(0.9);
+}
+
+.project-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 11, 11, 0.4);
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.35s ease;
+}
+
+.overlay-view-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(11, 11, 11, 0.85);
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-widest);
+  font-weight: 600;
+  transform: translateY(12px);
+  transition: transform 0.35s var(--ease-editorial);
+}
+
+.project-media-wrap:hover .project-image {
+  transform: scale(1.04);
+  filter: contrast(1.1) brightness(1);
+}
+
+.project-media-wrap:hover .project-media-overlay {
+  opacity: 1;
+}
+
+.project-media-wrap:hover .overlay-view-badge {
+  transform: translateY(0);
+}
+
+/* Info Block */
+.project-info-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-info-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-size: var(--fs-xs);
+  letter-spacing: var(--ls-widest);
+}
+
+.project-meta-category {
+  color: var(--color-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.project-meta-year {
+  color: var(--color-text-muted);
+}
+
+.project-meta-num {
+  margin-left: auto;
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+}
+
+.project-info-title {
+  font-size: var(--fs-h2);
+  line-height: var(--lh-tight);
+  margin-bottom: 0.75rem;
+}
+
+.project-info-title a {
+  color: var(--color-text-light);
+  transition: color var(--transition-fast);
+}
+
+.project-info-title a:hover {
+  color: var(--color-accent);
+}
+
+.project-info-subtitle {
+  font-size: var(--fs-sm);
+  color: var(--color-accent-light);
+  font-style: italic;
+  font-family: var(--font-serif);
+  margin-bottom: 1rem;
+}
+
+.project-info-statement {
+  font-size: var(--fs-body);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: 1.75rem;
+}
+
+.project-action-link {
+  margin-top: auto;
+}

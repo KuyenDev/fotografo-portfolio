@@ -1,0 +1,263 @@
+.about-page {
+  position: relative;
+  background-color: var(--color-bg);
+  padding-top: 6rem;
+}
+
+/* Hero */
+.about-hero-section {
+  padding: 4rem 0 5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .about-hero-grid {
+    grid-template-columns: 1.2fr 1fr;
+    gap: 5rem;
+  }
+}
+
+.about-hero-title {
+  font-size: var(--fs-display-1);
+  color: var(--color-text-light);
+  line-height: 0.98;
+  margin: 1rem 0 1.5rem;
+}
+
+.about-hero-lead {
+  font-size: var(--fs-body-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  max-width: 580px;
+}
+
+.about-hero-media {
+  position: relative;
+  border: 1px solid var(--color-border);
+  padding: 0.75rem;
+  background: var(--color-surface);
+}
+
+.about-hero-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.about-hero-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0.25rem 0.25rem;
+  font-size: 0.7rem;
+  letter-spacing: var(--ls-widest);
+  color: var(--color-text-secondary);
+}
+
+/* Philosophy */
+.philosophy-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.philosophy-columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .philosophy-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.philosophy-col-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: border-color var(--transition-normal);
+}
+
+.philosophy-col-card:hover {
+  border-color: rgba(185, 155, 118, 0.4);
+}
+
+.philo-card-title {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  letter-spacing: var(--ls-wide);
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.philo-card-desc {
+  font-size: var(--fs-body);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+/* Process Timeline */
+.about-process-section {
+  background-color: #0e0e0e;
+}
+
+.process-timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 640px) {
+  .process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .process-timeline {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.timeline-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.timeline-step-badge {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-step-title {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--color-text-light);
+}
+
+.timeline-step-desc {
+  font-size: var(--fs-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Craft Section */
+.craft-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .craft-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 4.5rem;
+  }
+}
+
+.craft-title {
+  font-size: var(--fs-h2);
+  color: var(--color-text-light);
+  margin-bottom: 1.25rem;
+}
+
+.craft-desc {
+  font-size: var(--fs-body-lg);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: 2rem;
+}
+
+.craft-specs-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.craft-specs-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: var(--fs-body);
+  color: var(--color-text-primary);
+}
+
+.craft-media {
+  border: 1px solid var(--color-border);
+  padding: 0.75rem;
+  background: var(--color-surface);
+}
+
+.craft-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Demo Declaration Card */
+.demo-declaration-card {
+  background: rgba(185, 155, 118, 0.05);
+  border: 1px solid rgba(185, 155, 118, 0.35);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.demo-declaration-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.demo-declaration-header h3 {
+  font-size: 1.25rem;
+  letter-spacing: var(--ls-widest);
+  text-transform: uppercase;
+  color: var(--color-accent-light);
+}
+
+.demo-declaration-body {
+  font-size: var(--fs-body);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+.demo-declaration-body a {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.demo-declaration-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
